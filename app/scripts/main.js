@@ -6,4 +6,4 @@ var WelcomeCtrl = require('./controllers/WelcomeCtrl'); // We can use our Welcom
 
 var app = angular.module('myApp', []);
 
-app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
+app.controller('WelcomeCtrl', WelcomeCtrl);
