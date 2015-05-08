@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
-    rimraf = require('gulp-rimraf'),
+    // rimraf = require('gulp-rimraf'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer');
 
@@ -27,13 +27,14 @@ server.all('/*', function(req, res) {
 });
 
 // Dev task
-gulp.task('dev', ['clean', 'views', 'styles', 'lint', 'browserify'], function() { });
+// gulp.task('dev', ['clean', 'views', 'styles', 'lint', 'browserify'], function() { });
+gulp.task('dev', ['views', 'styles', 'lint', 'browserify'], function() { });
 
 // Clean task
-gulp.task('clean', function() {
-	gulp.src('./dist/views', { read: false }) // much faster
-  .pipe(rimraf({force: true}));
-});
+// gulp.task('clean', function() {
+// 	gulp.src('./dist/views', { read: false }) // much faster
+//   .pipe(rimraf({force: true}));
+// });
 
 // JSHint task
 gulp.task('lint', function() {
